@@ -27,8 +27,12 @@ function App() {
     ){
       return;
     }
+
+    const newListItems = Array.from(listItems);
+    let removed = newListItems.splice(source.index, 1);
+    newListItems.splice(destination.index, 0, ...removed)
     
-    console.log(result)
+    setListItems(newListItems);
     
   }
 
@@ -83,10 +87,9 @@ function App() {
 
   return (
     <DragDropContext onDragEnd={onDragEnd} >
-      <Container>
+      <Container >
         <h1 className="centered">Draggable Todo</h1>
-        <Row>
-          <Col>
+       
             <AddTodo 
               addTodo={columnName[0]}
               listItems={listItems}
@@ -96,14 +99,14 @@ function App() {
               onSaveClick={onSaveClick}
               onPressEnter={onPressEnter}
             />
-          </Col>
-          <Col>
+        
+          {/* <Col>
             <DoingTodo doingTodo={columnName[1]}/>
           </Col>
           <Col>
             <CompletedTodo completedTodo={columnName[2]}/>
-          </Col>
-        </Row>
+          </Col> */}
+       
       </Container>
     </DragDropContext>
   );

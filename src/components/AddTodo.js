@@ -1,17 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Card, Form } from 'react-bootstrap';
 import List from './List';
 
 import { Droppable } from 'react-beautiful-dnd';
-const AddTodo = (props) => {
-
-  const [todoText, setTodoText] = useState('');
-  const [listItems, setListItems] = useState([]);
+const AddTodo = props => {
 
   const ref = useRef(null);
 
   return(
-    <Card style={{ width: '20rem', paddingBottom: '80px' }}>
+    <Card style={{ width: '20rem', paddingBottom: '50px', margin: '0 auto' }}>
       <Card.Body>
         <Card.Title className="centered">Add Todo</Card.Title>
         <Form.Control 

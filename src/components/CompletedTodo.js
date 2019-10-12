@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Card, Form } from 'react-bootstrap';
+import React from 'react';
+import { Card } from 'react-bootstrap';
 import { Droppable } from 'react-beautiful-dnd';
 
-const CompletedTodo = (props) => {
+const CompletedTodo = props => {
 
   return(
-    <Card style={{ width: '20rem', paddingBottom: '80px'  }}>
+    <Card style={{ width: '20rem', paddingBottom: '50px'  }}>
     <Card.Title className="centered">Completed</Card.Title>
       <Droppable droppableId={props.completedTodo}>
         {(provided) => (

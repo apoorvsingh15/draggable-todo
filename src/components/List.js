@@ -39,9 +39,9 @@ const List = ({ listItem, setListItems , listItems, onSaveClick, onPressEnter, i
             }
           </Col>
           <Col className="edit-button" lg={2} md={2}>
-            <Button onClick={editMode ? () => {return onSaveClick( listItem.id, editedList.text), setEditMode(!editMode)} : onEditClick} variant={editMode ? 'primary' : 'warning'}>{
+            {/* <Button onClick={editMode ? () => {return onSaveClick( listItem.id, editedList.text), setEditMode(!editMode)} : onEditClick} variant={editMode ? 'primary' : 'warning'}>{
               editMode ? "Save" : "Edit"
-            }</Button>
+            }</Button> */}
           </Col>
         </Row>
     </Card>)}
